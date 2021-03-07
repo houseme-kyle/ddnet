@@ -768,11 +768,10 @@ bool CScore::ShowRankThread(IDbConnection *pSqlServer, const ISqlData *pGameData
 	CScorePlayerResult *pResult = dynamic_cast<CScorePlayerResult *>(pGameData->m_pResult.get());
 
 	// check sort method
-	char aBuf[600];
-
 	char aServerLike[16];
 	str_format(aServerLike, sizeof(aServerLike), "%%%s%%", pData->m_Server);
 
+	char aBuf[600];
 	str_format(aBuf, sizeof(aBuf),
 	"SELECT Rank, Time, PercentRank "
 	"FROM ("
@@ -800,15 +799,16 @@ bool CScore::ShowRankThread(IDbConnection *pSqlServer, const ISqlData *pGameData
 		return true;
 	}
 
+	char aRegionalRank[16];
 	if(End)
 	{
-		str_format(pResult->m_Data.m_aaMessages[0], sizeof(pResult->m_Data.m_aaMessages[0]),
-			"%s is not ranked", pData->m_Name);
-
-		return false;
+		str_copy(aRegionalRank, "unranked", sizeof(aRegionalRank));
+	}
+	else
+	{
+		str_format(aRegionalRank, sizeof(aRegionalRank), "rank %d", pSqlServer->GetInt(1));
 	}
 
-	int LocalRank = pSqlServer->GetInt(1);
 	const char *pAny = "%";
 
 	if(pSqlServer->PrepareStatement(aBuf, pError, ErrorSize))
@@ -823,7 +823,7 @@ bool CScore::ShowRankThread(IDbConnection *pSqlServer, const ISqlData *pGameData
 	{
 		return true;
 	}
-
+	
 	if(!End)
 	{
 		int Rank = pSqlServer->GetInt(1);
@@ -854,8 +854,8 @@ bool CScore::ShowRankThread(IDbConnection *pSqlServer, const ISqlData *pGameData
 			}
 
 			str_format(pResult->m_Data.m_aaMessages[1], sizeof(pResult->m_Data.m_aaMessages[1]),
-				"Global rank %d || Local rank %d",
-				Rank, LocalRank);
+				"Global rank %d || %s %s",
+				Rank, pData->m_Server, aRegionalRank);
 		}
 	}
 	else
@@ -880,7 +880,6 @@ bool CScore::ShowTeamRankThread(IDbConnection *pSqlServer, const ISqlData *pGame
 
 	// check sort method
 	char aBuf[2400];
-
 	str_format(aBuf, sizeof(aBuf),
 		"SELECT l.ID, Name, Time, Rank, PercentRank "
 		"FROM (" // teamrank score board
@@ -956,14 +955,14 @@ bool CScore::ShowTeamRankThread(IDbConnection *pSqlServer, const ISqlData *pGame
 	return false;
 }
 
-void CScore::ShowTop5(int ClientID, int Offset)
+void CScore::ShowTop(int ClientID, int Offset)
 {
 	if(RateLimitPlayer(ClientID))
 		return;
-	ExecPlayerThread(ShowTop5Thread, "show top5", ClientID, "", Offset);
+	ExecPlayerThread(ShowTopThread, "show top", ClientID, "", Offset);
 }
 
-bool CScore::ShowTop5Thread(IDbConnection *pSqlServer, const ISqlData *pGameData, char *pError, int ErrorSize)
+bool CScore::ShowTopThread(IDbConnection *pSqlServer, const ISqlData *pGameData, char *pError, int ErrorSize)
 {
 	const CSqlPlayerRequest *pData = dynamic_cast<const CSqlPlayerRequest *>(pGameData);
 	CScorePlayerResult *pResult = dynamic_cast<CScorePlayerResult *>(pGameData->m_pResult.get());
@@ -974,8 +973,6 @@ bool CScore::ShowTop5Thread(IDbConnection *pSqlServer, const ISqlData *pGameData
 
 	// check sort method
 	char aBuf[512];
-	char aTime[32];
-
 	str_format(aBuf, sizeof(aBuf),
 		"SELECT Name, Time, Rank "
 		"FROM ("
@@ -999,9 +996,10 @@ bool CScore::ShowTop5Thread(IDbConnection *pSqlServer, const ISqlData *pGameData
 	pSqlServer->BindString(1, pData->m_Map);
 	pSqlServer->BindString(2, pAny);
 
-	// show top 3
+	// show top
 	str_copy(pResult->m_Data.m_aaMessages[0], "-----------< Global Top 3 >-----------", sizeof(pResult->m_Data.m_aaMessages[0]));
 
+	char aTime[32];
 	int Line = 1;
 	bool End = false;
 	while(!pSqlServer->Step(&End, pError, ErrorSize) && !End)
@@ -1026,10 +1024,10 @@ bool CScore::ShowTop5Thread(IDbConnection *pSqlServer, const ISqlData *pGameData
 	pSqlServer->BindString(1, pData->m_Map);
 	pSqlServer->BindString(2, aServerLike);
 	
-	str_copy(pResult->m_Data.m_aaMessages[Line], "-----------< Local Top 3 >-----------", sizeof(pResult->m_Data.m_aaMessages[Line]));
+	str_format(pResult->m_Data.m_aaMessages[Line], sizeof(pResult->m_Data.m_aaMessages[Line]), "-----------< %s Top 3 >-----------", pData->m_Server);
 	Line++;
 
-	// show top 3
+	// show top
 	while(!pSqlServer->Step(&End, pError, ErrorSize) && !End)
 	{
 		char aName[MAX_NAME_LENGTH];

@@ -1,0 +1,330 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DDNet",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "DDNet::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DDNet-Debug-e9b963df0d159342b95e.json",
+					"name" : "DDNet",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DDNet-Server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DDNet-Server-Debug-94774c9cddee35dc4205.json",
+					"name" : "DDNet-Server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "config_retrieve::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-config_retrieve-Debug-8a38e06afaa6bc37c6f8.json",
+					"name" : "config_retrieve",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "config_store::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-config_store-Debug-35d9a06f5f210cec5a50.json",
+					"name" : "config_store",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crapnet::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crapnet-Debug-db37a161fa7882f3bf4a.json",
+					"name" : "crapnet",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dilate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dilate-Debug-25012880316b0033f397.json",
+					"name" : "dilate",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dummy_map::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dummy_map-Debug-6ce4b877e8fcec9513fc.json",
+					"name" : "dummy_map",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "engine-shared::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-engine-shared-Debug-e70826b16057fd7aa216.json",
+					"name" : "engine-shared",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "everything::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-everything-Debug-1de00687c8389365764b.json",
+					"name" : "everything",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fake_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fake_server-Debug-b404fd7079804d7ee779.json",
+					"name" : "fake_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "game-shared::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-game-shared-Debug-96a1983e9a573490957f.json",
+					"name" : "game-shared",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-json-Debug-a4d54b18da241aaca0d2.json",
+					"name" : "json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "map_convert_07::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-map_convert_07-Debug-dbfbd3746c29ed2d6e20.json",
+					"name" : "map_convert_07",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "map_diff::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-map_diff-Debug-b43fe9a1dcbf2a437f3d.json",
+					"name" : "map_diff",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "map_extract::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-map_extract-Debug-947529c477fae4c6686f.json",
+					"name" : "map_extract",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "map_optimize::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-map_optimize-Debug-0e60867d442c1601f469.json",
+					"name" : "map_optimize",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "map_replace_image::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-map_replace_image-Debug-de8554875eac35bcf03a.json",
+					"name" : "map_replace_image",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "map_resave::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-map_resave-Debug-88fd2635cf4288603ae4.json",
+					"name" : "map_resave",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "mastersrv::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mastersrv-Debug-308f1b88fafb12e1158c.json",
+					"name" : "mastersrv",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "md5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-md5-Debug-90a53792aeb36d02e74d.json",
+					"name" : "md5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "package_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-package_all-Debug-595b5f165992e8de194b.json",
+					"name" : "package_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "package_default::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-package_default-Debug-38618f01b1e98b130d08.json",
+					"name" : "package_default",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "package_tar_gz::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-package_tar_gz-Debug-5602e51aa9975f4658c4.json",
+					"name" : "package_tar_gz",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "package_tar_xz::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-package_tar_xz-Debug-4457ee49442997b639a8.json",
+					"name" : "package_tar_xz",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "package_zip::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-package_zip-Debug-b3bab31ff75d2fbcb7ab.json",
+					"name" : "package_zip",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "packetgen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-packetgen-Debug-7a49be493b90b76d0359.json",
+					"name" : "packetgen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "steam_api::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-steam_api-Debug-25658b746d4edfcff945.json",
+					"name" : "steam_api",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tools::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tools-Debug-87a649a71e67ce26a25b.json",
+					"name" : "tools",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "twping::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-twping-Debug-cd188f4e75b1fd09640c.json",
+					"name" : "twping",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unicode_confusables::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unicode_confusables-Debug-981a33e4bdbdde813c7f.json",
+					"name" : "unicode_confusables",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uuid::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uuid-Debug-afd3e4a5b2ef9a3ed1c8.json",
+					"name" : "uuid",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kyle/Source/ddnet/build",
+		"source" : "/home/kyle/Source/ddnet"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
